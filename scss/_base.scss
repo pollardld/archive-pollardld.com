@@ -1,0 +1,73 @@
+.contact:target, .work:target, .blog:target {
+	margin-left: 0;
+	opacity: 1;
+	@include transition( all 1s ease );
+}
+
+.contact, .work, .blog {
+	background: transparent;
+	color: $primaryTextColor;
+	display: block;
+	height: auto;
+	margin-left: -100%;
+	opacity: 0;
+	padding-top: 50%;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	@include transition( all 1s ease );
+	h1 {
+		color: $primaryColor / 1.5;
+		font-size: 1.25em;
+		margin-bottom: .25em;
+		text-shadow: none;
+	}
+	p {
+		color: $primaryColor / 1.5;
+		font-family: $sansFont;
+		margin: 0 0 .25em 0;
+	}
+}
+
+.contact-info {
+	background: transparent;
+	position: relative;
+	width: 100%;
+	a {
+		display: inline-block;
+		margin: 1em 0 2em 0;
+		position: relative;
+		text-align: center;
+		width: 49%;
+	}
+	i {
+		color: $primaryTextColor;
+		font-size: 1.5em;
+		font-style: normal;
+	}
+}
+
+.blog-info {
+	background: transparent;
+	position: relative;
+	width: 100%;
+	a {
+		color: $secondaryColor;
+		display: inline-block;
+		font-family: 'Open Sans', sans-serif;
+		margin: 0 0 4em 0;
+		text-align: center;
+		width: 100%;
+	}
+	i {
+		color: $primaryColor / 2;
+		display: block;
+		font-size: 1.5em;
+		font-style: normal;
+	}
+}
+
+[class*="fontawesome-"]:before {
+	font-style: normal;
+	margin-right: .5em;
+}

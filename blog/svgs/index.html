@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Using an SVG as a link">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+	<title>SVGs as links - David Pollard</title>
+
+</head>
+<body>
+    <nav>
+        <a href="http://pollardld.com#blog" class="icon-home"></a>
+        <a href="svg-links.zip" class="icon-download"></a>
+    </nav>
+
+	<article id="svgs">
+    	<section class="explain">
+        	<p>The object element is currently the best way to add an svg. <a href="http://www.joshuasortino.com/journal/creating-a-responsive-svg" target="_blank">This article</a> by Josh Sortino has the best explaination of creation.</p>
+            <p>The important things to remember are to have a fall back image for shitty browsers and to remove any width and height attributes, bc then why make an svg?</p>
+            <p>The biggest pain in the ass, and the reason i am writing this, is making your svg clickable. Example, you want you logo to be scalable and your home button. You will have a headache trying to do this. Thanks to <a href="http://teamtreehouse.com/forum/how-do-you-make-a-svg-clickable" target="_blank">Alan Johnson</a> from Treehouse for relieving my headache! I tried:
+            	<ol>
+                	<li>wrapping the object in my a tag</li>
+                    <li>wrapping the whole div in my a tag</li>
+                    <li>z-indexing</li>
+                    <li>absolute positioning</li>
+                    <li>adding the link in the xml (this is was the common solution i found, however click the lonely cockroach and see)</li>
+                </ol>
+            </p>
+            <p>The answer! = wrap the object in the a tag, give the a tag a <code>position: relative; display: inline-block;</code> and use the after pseudo element on a with <code>bottom: 0; content: ""; left: 0; position: absolute; right: 0; top: 0;</code>
+            </p>
+        </section>
+		
+        <section class="svgs">
+    		<a href="#">
+   				<object data="insects.svg" type="image/svg+xml" class="logo-vector">
+        			<!--[if lte IE 8 ]-->
+						<img title="Home" src="http://placehold.it/300x300" />
+        			<--![endif]-->
+    			</object>
+  			</a>
+        </section>
+        
+        <section class="svgs" style="width: 30%;">
+   			<object data="insects2.svg" type="image/svg+xml" class="logo-vector"></object>
+    	</section>
+    
+    </article>
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+.home {
+	color: $primaryTextColor;
+	display: block;
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 9;
+}
+
+.info {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.dinosaur {
+	display: none;
+	.triceratops {
+		display: block;
+		position: relative;
+		// animation: two-step 8s 5s;
+		// @include animation( two-step 8s 5s);
+		// -webkit-animation-fill-mode: forwards;
+		// animation-fill-mode: forwards;
+		.eye {
+			background: $primaryTextColor;
+			border: 4px solid #fff;
+			border-radius: 50%;
+			cursor: pointer;
+			height: 3%;
+			position: absolute;
+			right: 30%;
+			top: 25%;
+			width: 3%;
+			z-index: 999;
+			@include animation( blink 10s linear 3s );
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+			&:hover {
+				background: $secondaryColor;
+			}
+		}
+		.eye-click {
+			background: $secondaryColor;
+			@include animation( boom 2s );
+		}
+		.dino {
+			left: -50%;
+			position: relative;
+			width: 150%;
+		}
+	}
+}
+
+.content {
+	a {
+		display: inline-block;
+		margin: -1.5em -4px 0 0;
+		height: 8em;
+		position: relative;
+		text-align: center;
+		width: 33%;
+		svg {
+			height: 6em;
+			margin: 0 5%;
+			position: relative;
+			top: 0;
+			vertical-align: top;
+			width: 90%;
+		}
+		&:nth-of-type(1) {
+			@include animation( rock 15s linear 1 10s );
+		}
+		&:nth-of-type(2) {
+			@include animation( rock 15s linear 1 20s);
+		}
+		&:nth-of-type(3) {
+			@include animation( rock 15s linear 1 30s);
+		}
+		&:hover {
+			cursor: pointer;
+			.frame {
+				fill: $secondaryColor;
+			}
+			.t-rex, .pteranodon, .stegosaurus {
+				@include transform( skew(-5deg,5deg) );
+				@include transition( .5s );
+				z-index: 1;
+				path {
+					fill: $fourthColor;
+				}		
+			}
+			i {
+				color: $secondaryColor;
+				opacity: 1;
+				@include transition( all 0.5s ease );
+			}
+		}
+		i {
+			color: $primaryColor / 1.5;
+			line-height: 2em;
+			opacity: .5;
+			@include transition( all 0.5s ease );
+		}
+	}
+	.t-rex, .pteranodon, .stegosaurus {
+		height: 3em;
+		margin: 0;
+		position: absolute;
+		top: 2em;
+	}
+	.t-rex {
+		left: 30%;	
+		width: 40%;
+	}
+	.pteranodon {
+		left: 27.5%;
+		width: 45%;
+	}
+	.stegosaurus {
+		left: 25%;
+		width: 50%;
+	}
+}

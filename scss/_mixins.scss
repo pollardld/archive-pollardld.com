@@ -1,0 +1,30 @@
+/*=========================================
+  Mixins
+  =======================================*/
+  
+  $primaryColor: #24ffaf;
+  $secondaryColor: #F0185B;
+  $thirdColor: #ff28e4;
+  $fourthColor: #F4F382;
+  $primaryTextColor: #363D3D;
+  
+  $displayFont: 'oilcan', 'sans-serif';
+  $sansFont: 'Open Sans', 'sans-serif';
+  
+@mixin animation ( $animation ) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  animation: $animation;
+}
+
+@mixin transition ( $transition ) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transform ( $transform ) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  transform: $transform;
+}

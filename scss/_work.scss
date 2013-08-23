@@ -1,0 +1,117 @@
+.work-info {
+	position: relative;
+	width: 100%;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			text-align: center;
+			span {
+				font-size: .5em;
+			}
+			a {	
+				border: 2px solid $primaryColor / 3;
+				display: block;
+				margin: 0 auto 2em;
+				opacity: 1;
+				padding: 2.5em 0;
+				position: relative;
+				text-align: center;
+				vertical-align: top;
+				width: 95%;
+				@include transition( .5s );	
+				h2 {
+					font-size: 1em;
+					margin: 0 auto;
+					text-shadow: 1px 1px #fff;
+					@include transition( .25s );
+				}
+				&:hover {
+					box-shadow: rgba(0, 100, 0, 0.15) 0px 25px 20px;
+					h2 {
+						color: $secondaryColor;
+						text-shadow: 1px 1px #fff;
+						@include transform( skew(-20deg, 2deg) );
+						@include transition( 1s );
+					}
+				}
+				&#mobile {
+					background-image: url('../inc/img/bg-img@2x.png');
+					background-position: center top;
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+				&#tkhf {
+					background-image: url('../inc/img/kids.jpg');
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					background-position: center 50%;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}	
+				&#attractics {
+					background-image: url('../inc/img/texture.png');
+					background-repeat: repeat;
+					background-position: center center;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+						h2 {
+							color: $primaryColor;
+						}
+					}
+				}
+				&#kades {
+					background-image: url('../inc/img/subtle_dots.png');
+					background-repeat: repeat;
+					background-position: 100% center;
+					background-size: auto;
+					&:hover {
+						background-size: 10% auto;
+					}
+				}
+				&#dr {
+					background-image: url('../inc/img/dr.jpg');
+					background-repeat: no-repeat;
+					background-position: top center;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+				&#ckay {
+					background-image: url('../inc/img/ckaybday1.jpg');
+					background-repeat: no-repeat;
+					background-position: 50%;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+				&#bisk{
+					background-image: url('../inc/img/bisk.jpeg');
+					background-repeat: repeat-x;
+					background-position: 100% 100%;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 110% auto;
+					}
+				}
+				&#aspire {
+					background-image: url('../inc/img/aspire.jpg');
+					background-repeat: no-repeat;
+					background-position: top;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+			}
+		}
+	}
+}

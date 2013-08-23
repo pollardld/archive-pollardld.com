@@ -1,0 +1,26 @@
+{
+  "fonts": [
+    "ftuo-icons.ttf",
+    "ftuo-icons.woff",
+    "ftuo-icons.eot",
+    "ftuo-icons.svg"
+  ],
+  "templates": [
+    "ftuo-icons-preview.html",
+    "style.css"
+  ],
+  "file_name": "ftuo-icons",
+  "glyphs": [
+    "computer-icon",
+    "health-icon",
+    "scm2-icon",
+    "scm-icon",
+    "mkt-icon",
+    "pm2-icon",
+    "mkt2-icon",
+    "business-icon",
+    "finance-icon",
+    "power-icon",
+    "pm-icon"
+  ]
+}

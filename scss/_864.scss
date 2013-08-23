@@ -1,0 +1,84 @@
+/*=========================================
+  Global
+  =======================================*/
+
+h1 { 
+  	font-size: 2.25em; 
+} 
+
+.dinosaur, .info {
+	display: inline-block;
+	margin: 1em 3%;
+	position: relative;
+	vertical-align: top;
+}
+.dinosaur {
+	width: 30%;
+}
+.info {
+	width: 55%;
+}
+
+.content {
+	a {
+		margin: .5em 0;
+		width: 28%;
+		&:hover {
+			cursor: pointer;
+			.frame {
+				fill: $secondaryColor;
+			}
+			.t-rex, .pteranodon, .stegosaurus {
+				@include transform( skew(-5deg,5deg) );
+				@include transition( .5s );
+				z-index: 1;
+				path {
+					fill: $fourthColor;
+				}		
+			}
+		}
+	}
+	.t-rex, .pteranodon, .stegosaurus {
+		top: 2.5em;
+	}
+}
+
+.contact, .work, .blog {
+	padding-top: 25%;
+}
+
+.work-info {
+	ul {
+		li {
+			display: inline-block;
+			margin: 0 5% 2em;
+			width: 40%;
+		 	a {
+				font-size: 2em;
+				margin: .5em 0 1em;
+				padding: 1.5em 0;
+				width: 100%;
+			}
+			&:nth-of-type(even) {
+				margin: 0 2% .5em 0;
+			}
+		}
+	}
+}
+
+
+.contact-info {
+	a {
+		width: 24%;
+	}
+	i {
+		font-size: 3em;
+	}
+}
+
+.blog-info {
+	a {
+		margin: 0 -4px 4em;
+		width: 50%;
+	}
+}

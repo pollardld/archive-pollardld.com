@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="A mobile ready web page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Responsiveness</title>
+    
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <link rel="apple-touch-icon-precomposed" href="iphone-icon.png" />
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+</head>
+<body>
+
+<nav id="menu" role="menu">
+	<!-- ADA Skip Navigation Link -->
+	<div class="skiplink"><a href="#menu-control">Skip Navigation</a></div>
+	<ul>
+    	<li><a href="#">Navigation</a></li>
+    	<li><a href="#">is</a></li>
+    	<li><a href="#">scrollable.</a></li>
+    	<li><a href="#">Extra</a></li>
+    	<li><a href="#">padding</a></li>
+    	<li><a href="#">is given</a></li>
+    	<li><a href="#">to last</a></li>
+    	<li><a href="#">child</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+
+    <header>
+    	<div id="menu-control">
+        	<a href="#menu" title="open menu">|||</a>
+        	<a href="#" title="close menu">|||</a> 
+        </div>
+        
+        <!-- important to set height and width, and save a @2x retina version -->
+        <a id="phone-call" href="#"><img src="phone.png" height="19" width="17" alt="Call Now" /></a>
+
+    </header>
+
+    
+	<section class="concept">
+       	<div id="gradient"></div>
+    </section> 
+    <section class="main">
+       	<h1>Mobile Focused</h1>
+       		<h4>Responsive Web Page</h4>
+				<br /><br />
+        		<p>This is a responsive design that was built to focus on mobile and tablet viewing.</p>
+                <p>get the code on <a href="https://github.com/diccfish/mobile-template.git" role="code source">github</a>.</p>
+                <p>OR
+                <br /> download the <a href="responsive.zip">zipped file</a>.</p>
+
+                
+            <blockquote>
+                This is a blockquote
+                <br /><br />
+                <strong>Bacon Ipsum</strong>
+                <br />
+                <em>Pig nostrud laborum meatloaf</em>
+            </blockquote>
+                
+            <hr>
+            
+            <div id='slider' class='swipe'>
+              <ul>
+                <li style='display:block'><div>This a touch enabled slider.</div></li>
+                <li style='display:none'><div>This slider is using <a href="http://swipejs.com/">swipejs</a>.</div></li>
+                <li style='display:none'><div>Weeeeeee</div></li>
+                <li style='display:none'><div>eeeeeeee</div></li>
+                <li style='display:none'><div>eeeeeeee</div></li>
+              </ul>
+              
+              <a href='#' id="prev" onclick='slider3.prev();return false;'></a> 
+              <a href='#' id="next" onclick='slider3.next();return false;'></a>
+            </div>
+            
+            <!-- Accordion Example -->
+            <div class="accordion">
+                <span class="target-fix" id="accordion"></span>
+                <span class="target-fix" id="accordion1"></span> 
+                <span class="target-fix" id="accordion2"></span> 
+                <span class="target-fix" id="accordion3"></span> 
+                <!-- First Accoridon Option -->
+                <a href="#accordion1" id="open-accordion1" title="accordion option 1">First Accordion Option</a>
+                <!-- Shows When Open, so Accoridan will Close -->
+                <a href="#accordion" id="close-accordion1" title="close accordion 1">First Accordion Option</a>
+                    <div class="accordion-content">
+                        <p>This accordion is all html and css!</p>
+                    </div>
+                
+                <!-- Second Accoridon Option -->
+                <a href="#accordion2" id="open-accordion2" title="accordion option 2">Second Accordion Option</a>
+                <!-- Shows When Open, so Accoridan will Close -->
+                <a href="#accordion" id="close-accordion2" title="close accordion 2">Second Accordion Option</a>
+                    <div class="accordion-content">
+                        <p>Paragraph in an Accoridion.
+                            <br />
+                            Et ham qui, filet mignon aliqua adipisicing anim short loin esse pork chop proident occaecat pork loin ea. Mollit boudin ut culpa nulla officia aute beef ribs enim in bacon. 
+                        </p>       
+                    </div>
+                
+                <!-- Third Accoridon Option -->
+                <a href="#accordion3" id="open-accordion3" title="accordion option 2">Third Accordion Option</a>
+                <!-- Shows When Open, so Accoridan will Close -->
+                <a href="#accordion" id="close-accordion3" title="close accordion 3">Third Accordion Option</a>
+                    <div class="accordion-content">
+                        <p>Et ham qui, filet mignon aliqua adipisicing anim short loin esse pork chop proident occaecat pork loin ea. Mollit boudin ut culpa nulla officia aute beef ribs enim in bacon. </p>
+                    </div>
+                <!-- More Accoridon options could be added. Copy/paste a option appove. then change the number (ex., #accordion4) and add new CSS for option. -->
+            </div>
+
+            <!-- Tabs Example -->
+            <div class="tabs">
+                <span class="target-fix" id="fixed-tab-1"></span>
+                <span class="target-fix" id="fixed-tab-2"></span>
+                <span class="target-fix" id="fixed-tab-3"></span>
+                <span class="target-fix" id="fixed-tab-4"></span>
+                <a href="#fixed-tab-1">One</a>
+                <a href="#fixed-tab-2">Two</a>
+                <a href="#fixed-tab-3">Three</a>
+                <a href="#fixed-tab-4">Four</a>
+
+                <div class="tab-content">
+
+                    <div id="tab-content-1">
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                        <p>This tab area is all html and css, without radio buttons!!</p>
+                       
+                        
+                    </div>
+                    
+                    <div id="tab-content-2">
+                        <p>
+                            <h2>Content Two</h2>
+                                Et ham qui, filet mignon aliqua adipisicing anim short loin esse pork chop proident occaecat pork loin ea. Mollit boudin ut culpa nulla officia aute beef ribs enim in bacon.
+                                <br /><br />
+                                Et ham qui, filet mignon aliqua adipisicing anim short loin esse pork chop proident occaecat pork loin ea.
+                        </p>
+                    </div>
+                    
+                    <div id="tab-content-3">
+                        <p>Content Three</p>
+                    </div>
+                    
+                    <div id="tab-content-4">
+                        <p>Content Four</p>
+                    </div>
+                
+                </div>
+            </div>
+            
+            <blockquote>This page also uses:
+ 			    <article><a href="http://retinajs.com/">retina.js</a> for inline images</article>
+            	<article>media queries in the css</article>
+            	<article>if you care about such things, <a href="https://github.com/scottjehl/Respond">respond.js</a> can help IE < IE 8 read the media queries</article>
+            	<article>all that does not matter unless you use <a href="http://code.google.com/p/html5shiv/">html5shiv</a> to help IE < IE 8 read html5 tags.</article>
+            	<article>and even deeper still, IE10 and the windows 8 phone have made things even more difficult by not using the current standard for viewports. This is probably because apple invented the standard. So, thank you massive corporations for your bullshit. I do not have the motivation to include the fix here, but you can find out everything you need to know with <a href="http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/">this article</a>.</article>
+            </blockquote>
+        
+        </section>
+            
+        <footer>
+            <p>Anyone can use this anywhere.</p>
+        </footer>
+	</div>
+<!-- Script for retina.js -->
+<script src="retina.js"></script>
+<!-- Script for swipe.js -->
+<script src="swipe.js"></script>
+<script>
+// calling the id for the slider
+var slider3 = new Swipe(document.getElementById('slider'));
+</script>
+</body>
+</html>

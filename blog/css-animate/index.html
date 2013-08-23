@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="css animation">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+	<title>For the fuck of it - David Pollard</title>
+	
+	<style>
+		section {
+			position: relative;
+		}
+		#hexagon {
+			width: 28px;
+			height: 19px;
+			background: #6eafe0;
+			position: absolute;
+			margin: 130px 0 0 128px;
+			transform: rotate(18deg);
+			-moz-transform: rotate(18deg);
+			-webkit-transform: rotate(18deg);
+			-webkit-animation: nut 2s infinite;
+		}
+		#hexagon:before {
+			content: "";
+			position: absolute;
+			top: -7px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 14px solid transparent;
+			border-right: 14px solid transparent;
+			border-bottom: 7px solid #6eafe0;
+		}
+		#hexagon:after {
+			content: "";
+			position: absolute;
+			bottom: -7px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 14px solid transparent;
+			border-right: 14px solid transparent;
+			border-top: 7px solid #6eafe0;
+		}
+		
+		.logo-vector {
+			left: 100px;
+			margin: 0 auto;
+			position: absolute;
+			top: 100px;
+			width: 175px;
+			-webkit-animation: wrench 2s infinite;
+		}
+		
+		@-webkit-keyframes wrench {
+			0% { -webkit-transform: rotate(0); }
+			80% { -webkit-transform: rotate(3deg); }
+			100% { -webkit-transform: rotate(0); }
+		}
+		@-webkit-keyframes nut {
+			0% { -webkit-transform: rotate(18deg); }
+			80% { -webkit-transform: rotate(21deg); }
+			100% { -webkit-transform: rotate(18deg); }
+		}
+
+	</style>
+
+</head>
+
+<body>
+    
+    <section>
+	 	<div id="hexagon"></div>
+    </section>
+		
+    <section>
+   		<object data="iconmonstr-wrench-icon.svg" type="image/svg+xml" class="logo-vector"></object>
+    </section>
+
+      
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="An accordion made with html and css, no javascript or jquery. super fast, super easy, super sexy">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+    <title>CSS Accordion</title>
+
+</head>
+<body>
+    <nav>
+        <a href="http://pollardld.com#blog" class="icon-home"></a>
+        <a href="accordion.zip" class="icon-download"></a>
+    </nav>
+
+    <section>
+        Below is an accordion that was created with css and html, no javascript or jquery required.
+        The accordion uses the :target psuedo element in the css to target certain divs. There is also a target fix to avoid any jump when an anchor is selected.
+    </section>
+    <!-- Accordion -->
+    <div class="accordion">
+        <!-- span to target fix closing accordion -->
+        <span class="target-fix" id="accordion"></span>
+         
+        <!-- First Accoridon Option -->
+        <div>
+            <!-- span to target fix accordion -->
+            <span class="target-fix" id="accordion1"></span>
+            
+            <!-- Link to open accordion, hidden when open --> 
+            <a href="#accordion1" id="open-accordion1" title="open">First Accordion</a>
+            
+            <!-- Link to close accordion, hidden when closed -->
+            <a href="#accordion" id="close-accordion1" title="close">First Accordion</a> 
+            
+            <!-- Accorion content goes in this div -->
+            <div class="accordion-content">
+                <p>Accordion 1 Content</p>
+            </div>
+        </div>
+
+        <!-- Second Accoridon Option -->
+        <div>
+            <span class="target-fix" id="accordion2"></span>
+            <a href="#accordion2" id="open-accordion2" title="open">Second Accordion</a>
+            <a href="#accordion" id="close-accordion2" title="close">Second Accordion</a>
+            <div class="accordion-content">
+                <p>Accordion 2 Content.</p>       
+            </div>
+        </div>
+
+        <!-- Third Accoridon Option -->
+        <div>
+            <span class="target-fix" id="accordion3"></span>
+            <a href="#accordion3" id="open-accordion3" title="open">Third Accordion</a>
+            <a href="#accordion" id="close-accordion3" title="close">Third Accordion</a>
+            <div class="accordion-content">
+                <p>Accordion 3 Content</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

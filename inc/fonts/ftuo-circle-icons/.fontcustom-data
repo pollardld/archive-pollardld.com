@@ -1,0 +1,26 @@
+{
+  "fonts": [
+    "ftuo-circle-icons.ttf",
+    "ftuo-circle-icons.woff",
+    "ftuo-circle-icons.eot",
+    "ftuo-circle-icons.svg"
+  ],
+  "templates": [
+    "ftuo-circle-icons-preview.html",
+    "style.css"
+  ],
+  "file_name": "ftuo-circle-icons",
+  "glyphs": [
+    "computer-circle-icon",
+    "health-circle-icon",
+    "scm2-circle-icon",
+    "scm-circle-icon",
+    "mkt-circle-icon",
+    "pm2-circle-icon",
+    "mkt2-circle-icon",
+    "business-circle-icon",
+    "finance-circle-icon",
+    "power-circle-icon",
+    "pm-circle-icon"
+  ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Make a slide effect on radio buttons and checkboxes using css3">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+	<title>Slide Checkbox and Radio Button - David Pollard</title>
+
+</head>
+<body>
+	<nav>
+		<a href="http://pollardld.com#blog" class="icon-home"></a>
+		<a href="form-slide.zip" class="icon-download"></a>
+	</nav>
+	
+	<h2>Checkbox Slide</h2>
+    	<article class="checkbox" style="margin-top:35px;">
+			<input type="checkbox" />
+			<label></label>                
+		</article>
+        <p>It is probably easier to use this tool though <a href="http://proto.io/freebies/onoff/" target="_blank">proto.io</a></p>
+    <h2>Radio Button Slide</h2>
+    	<p>I hope no one ever has to figure out how to do this on their own again. It is done this way because the html syntax could not be changed (i.e., .radiofield and .radio, ...), change for simpler forms. If you need more than 2 radio buttons, fuck with the css, or check out <a href="http://ghinda.net/css-toggle-switch/">this excellent resources</a> by a brilliant Romanian who 10 years later is still hating on Netscape Navigator 4.</p>
+    	<div class="radiofield">
+			<div class="radio">
+				<input type="radio" name="radio-button" checked/>
+				<label>Radio</label>
+				<span class="slide-button"></span>
+			</div>
+			<div class="radio">
+				<input type="radio" name="radio-button" />
+				<label>Radio 2</label>
+				<span class="slide-button1"></span> 
+			</div>							
+		</div>
+
+
+</body>
+</html>

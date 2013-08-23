@@ -1,0 +1,609 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+* { margin: 0; padding: 0; font-family: 'Open Sans',sans-serif; }
+
+body { background: #333; font-size: .875em; font-weight: 300; }
+
+h1 { font-size: 1.75em; font-weight: normal; }
+h2 { font-size: 1.3125em; font-weight: normal; }
+h3 { font-size: 1.25em; font-weight: normal }
+h4 { font-size: 1em; font-weight: normal; }
+
+p { line-height: 20px; }
+
+a { color: #FF9900; font-weight: 600; text-decoration: none; }
+a:hover { cursor: pointer; }
+
+
+/*_________________  Navigation
+________________________________________*/
+
+#menu {
+  /* Collapsed */
+  background: url(dark_matter.png) repeat;
+  height: 100%;
+  left: 0;
+  overflow: auto; 
+  position: fixed;
+  top: 0;
+  width: 0;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+}
+#menu ul {
+	list-style: none;
+}
+#menu ul li {
+	display: block;
+	float: left;
+	width: 100%;
+}
+#menu ul li a {
+  	color: #fff;
+	float: left;
+	font-size: 1.375em;
+	padding: 20px 0;
+	text-indent: 20px;
+	width: 100%;
+	-webkit-transition:all 2s ease-in-out;
+	-moz-transition:all 2s ease-in-out;
+	-o-transition:all 2s ease-in-out;
+	transition:all 2s ease-in-out;
+}
+#menu li:nth-child(2n) {
+	background: rgba(255,255,255,0.1);
+}
+#menu li:last-child {
+	padding-bottom: 100px;
+}
+
+#menu:target {
+	box-shadow: inset -3px 0 5px #000;
+  	width: 60%;
+  	z-index: 999;
+}
+
+#menu:target + .container {
+	right: -60%;
+	position: fixed;
+	overflow: hidden;
+}
+#menu:target + .container #menu-control a:first-child {
+	display: none;
+}
+#menu:target + .container #menu-control a:last-child {
+	display: block;
+}
+
+.skiplink {
+	left: -9999px;
+	position: absolute;
+}
+
+
+/*_________________  Header
+________________________________________*/
+
+header {
+  	background: #001D5F;
+  	height: 50px;
+  	transition: all 0.3s ease;
+  	-webkit-transition: all 0.3s ease;
+  	-moz-transition: all 0.3s ease;
+}
+header #logo {
+	margin: 0 auto;
+	padding-top: 16px;
+	width: 105px;
+}
+
+
+/*_________________  Header Buttons
+________________________________________*/
+
+header #phone-call {
+	background: #72ab13;
+	background-image: -moz-linear-gradient( 90deg , rgba(114, 171, 19, 1) 0%, rgba(114, 171, 19, 0.6) 100%, rgba(255, 255, 255, 0.5) 100%);
+	background-image: -webkit-linear-gradient( 90deg , rgba(114, 171, 19, 1) 0%, rgba(114, 171, 19, 0.6) 100%, rgba(255, 255, 255, 0.5) 100%);
+	background-image: -o-linear-gradient( 90deg , rgba(114, 171, 19, 1) 0%, rgba(114, 171, 19, 0.6) 100%, rgba(255, 255, 255, 0.5) 100%);
+	background-image: -ms-linear-gradient( 90deg , rgba(114, 171, 19, 1) 0%, rgba(114, 171, 19, 0.6) 100%, rgba(255, 255, 255, 0.5) 100%); 
+	border: 1px solid rgba(255,255,255,0.2);
+	border-radius: 3px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.5);
+	float: right;
+	padding: 4px 15px 2px 15px;
+	margin: 10px 15px;
+}
+
+#menu-control a {
+	background: #001D5F;
+	color: #fff;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.25em;
+	margin: 1px 0 -1px 5px;
+	padding: 4px 6px 6px;
+	z-index: 99999;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+}
+#menu-control a:last-child  {
+	display: none;
+}
+
+
+/*_________________  Containers
+________________________________________*/
+
+.container {
+	background-image: -moz-linear-gradient( 90deg , rgba(44, 50, 65, 1) 0%, rgba(44, 50, 65, 0.9) 100%);
+	background-image: -webkit-linear-gradient( 90deg , rgba(44, 50, 65, 1) 0%, rgba(44, 50, 65, 0.9) 100%);
+	background-image: -ms-linear-gradient( 90deg , rgba(44, 50, 65, 1) 0%, rgba(44, 50, 65, 0.9) 100%);
+	float: right;
+	height: 100%;
+	min-height: auto;
+	min-height: 1400px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+  	width: 100%;
+  	transition: all 0.3s ease;
+  	-webkit-transition: all 0.3s ease;
+  	-moz-transition: all 0.3s ease;
+}
+
+.concept {
+	background: url(bg.png) top no-repeat;
+	background-size: cover;
+	height: 140px;
+	position: relative;
+}
+
+#gradient {
+	background-image: -moz-linear-gradient( 90deg , rgba(44, 50, 65, 0.8) 0%, rgba(44, 50, 65, 0) 40%);
+	background-image: -webkit-linear-gradient( 90deg , rgba(44, 50, 65, 0.8) 0%, rgba(44, 50, 65, 0) 40%);
+	background-image: -ms-linear-gradient( 90deg , rgba(44, 50, 65, 0.8) 0%, rgba(44, 50, 65, 0) 40%);
+	height: 140px;
+}
+
+.main {
+	background: #fff;
+	box-shadow: 0 0 5px #000;
+	color: #333333;
+	margin: -60px auto 20px auto;
+	padding: 10px;
+	position: relative;
+	width: 90%;
+}
+
+.main h1, h4 {
+	color: #001D5F;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/*_________________  Quotes
+________________________________________*/
+
+blockquote {
+	background: #f2f2f2;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 60px 0;
+	padding: 10px 10px 10px 45px;
+	position: relative;
+}
+blockquote:before {
+	color: #ccc;
+	content: "\201C";
+	font-family: Helvetica, sans-serif;
+	left: 5px;
+	line-height: 0;
+	font-size: 100px;
+	position: absolute;
+	top: 45px;
+}
+
+blockquote article {
+	background: #fff;
+	border-radius: 5px;
+	margin: 20px auto;
+	padding: 1%;
+	width: 80%;
+}
+
+
+/*_________________  Text Area
+________________________________________*/
+
+.text {
+	margin: 60px 0;
+}
+
+.text ul {
+	padding-left: 20px;
+}
+.text li {
+	line-height: 24px;
+	padding-left: 5px;
+}
+
+
+/*_________________  Slider
+________________________________________*/
+
+.swipe {
+	margin: 60px 0;
+  	position: relative;
+  	z-index: 1;
+  	-webkit-perspective: 1000;
+  	-webkit-backface-visibility: hidden;
+}
+.swipe li div, .swipe div div div {
+  	margin: 0 10px;
+  	padding: 50px 10px;
+  	background: #ccc;
+  	font-weight: bold;
+  	color: #fff;
+  	font-size: 20px;
+}
+.swipe #prev, .swipe #next {
+	position: relative;
+	width: 1em;
+	height: 1.5em;
+}
+.swipe #prev {
+	float: left;
+	margin: 10px 0 0 1.35em;
+}
+.swipe #prev:before {
+	right: 1em;
+	position: absolute;
+	border-right: .8em solid #ccc;
+	border-top: .8em solid rgba(44, 44, 44, 0);
+	border-bottom: .8em solid rgba(44, 44, 44, 0);
+	top: 0;
+	content: "";
+}
+
+.swipe #next {
+	float: right;
+	margin: 10px 1.35em 0 0;
+}
+.swipe #next:before {
+	left: 1em;
+	position: absolute;
+	border-left: .8em solid #ccc;
+	border-top: .8em solid rgba(44, 44, 44, 0);
+	border-bottom: .8em solid rgba(44, 44, 44, 0);
+	content: "";
+}
+
+
+/*_________________  Accordion
+________________________________________*/
+
+.accordion {
+	position: relative;
+    margin: 60px auto;
+    width: 100%;
+}
+ 
+#open-accordion1, #open-accordion2, #open-accordion3, #close-accordion1, #close-accordion2, #close-accordion3 {
+	background-image: -moz-linear-gradient( 90deg , rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, #fff 75%);
+	background-image: -webkit-linear-gradient( 90deg , rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, #fff 75%);
+	background-image: -o-linear-gradient( 90deg , rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, #fff 75%);
+	background-image: -ms-linear-gradient( 90deg , rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 50%, #fff 75%);	border: 1px solid #ccc;
+    box-shadow: 0 1px 2px #333;
+    line-height: 30px;
+    height: 30px;
+    float: left;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 99%;
+}
+
+#close-accordion1, #close-accordion2, #close-accordion3 {
+    display: none;
+}
+
+.accordion a {
+	color: #000;
+	float: left;
+	font-size: 1.25em;
+	font-weight: normal;
+	padding-left: 1%;
+	text-shadow: none;
+}
+
+#open-accordion1:after, #open-accordion2:after, #open-accordion3:after, #close-accordion1:after, #close-accordion2:after, #close-accordion3:after {
+	content: "";
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #ccc;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	z-index: 999;
+}
+
+.target-fix {
+	display: block;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+
+.accordion span:nth-of-type(2):target ~ .accordion-content:nth-of-type(1) { display: block; height: auto; padding-bottom: 25px; padding-top: 10px; }
+.accordion span:nth-of-type(2):target ~ #close-accordion1 { display: block; }
+.accordion span:nth-of-type(2):target ~ #open-accordion1 { display: none; }
+.accordion span:nth-of-type(2):target ~ #close-accordion1:after { border-top: 10px solid #000; }
+
+.accordion span:nth-of-type(3):target ~ .accordion-content:nth-of-type(2) { display: block; height: auto; padding-bottom: 25px; padding-top: 10px; }
+.accordion span:nth-of-type(3):target ~ #close-accordion2 { display: block; }
+.accordion span:nth-of-type(3):target ~ #open-accordion2 { display: none; }
+.accordion span:nth-of-type(3):target ~ #close-accordion2:after { border-top: 10px solid #000; }
+
+.accordion span:nth-of-type(4):target ~ .accordion-content:nth-of-type(3) { display: block; height: auto; padding-bottom: 25px; padding-top: 10px; }
+.accordion span:nth-of-type(4):target ~ #close-accordion3 { display: block; }
+.accordion span:nth-of-type(4):target ~ #open-accordion3 { display: none; }
+.accordion span:nth-of-type(4):target ~ #close-accordion3:after { border-top: 10px solid #000; }
+
+
+.accordion-content {
+	border: 1px solid #ccc;
+    height: 0;
+    margin: 0 auto;
+    padding: 0 1%;
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    transition: all 0.1s ease;
+  	-webkit-transition: all 0.1s ease;
+  	-moz-transition: all 0.1s ease;
+}
+
+
+/*_________________  Tabs
+________________________________________*/
+
+.tabs {
+	display: block;
+	height: 100%;
+	margin: 60px auto;
+	position: relative;
+}
+
+.tabs a {
+	background: #ccc;
+    box-shadow: 1px 1px 1px rgba(255,255,255,1), -1px -1px 1px rgba(255,255,255,1);
+	color: #333;
+	display: block;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    width: 25%;
+}
+
+.tabs a:hover { background: #999; cursor: pointer; }
+
+.tab-content {
+	background: #FFFFF2;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	display: block;
+	min-height: 250px;
+	height: auto !important;
+	height: 250px;
+	margin-bottom: 40px;
+	overflow: hidden;
+	padding: 2.5%;
+	width: 95%;
+}
+
+.tab-content div { display: none; }
+
+#fixed-tab-1:target ~ .tab-content #tab-content-1,
+#fixed-tab-2:target ~ .tab-content #tab-content-2,
+#fixed-tab-3:target ~ .tab-content #tab-content-3,
+#fixed-tab-4:target ~ .tab-content #tab-content-4 
+{ display: block; }
+
+#fixed-tab-1:target ~ a:nth-of-type(1),
+#fixed-tab-2:target ~ a:nth-of-type(2),
+#fixed-tab-3:target ~ a:nth-of-type(3),
+#fixed-tab-4:target ~ a:nth-of-type(4) 
+{ background: #666; color: #fff; }
+
+
+.tab-content ul {
+	padding-left: 2.5%;
+}
+
+
+/*_________________  Footer
+________________________________________*/
+
+footer {
+	color: #fff;
+	margin: 0 auto;
+	position: relative;
+	width: 90%;
+}
+
+footer ul {
+	padding-bottom: 10px;
+}
+
+footer li {
+	float: left;
+	font-weight: bold;
+	list-style: none;
+	padding-right: 0.3em;
+}
+footer li:after {
+	content: " | ";
+	padding: 0 0.3em;
+}
+footer li:last-child::after {
+	content: " ";
+}
+footer li a {
+	color: #fff;
+}
+
+footer img {
+	display: block;
+	float: right;
+	margin: 10px;
+}
+
+footer p {
+	font-size: .875em;
+}
+
+
+/*_________________  Media Queries
+________________________________________*/
+
+/* Small screen, non-retina */
+	@media only screen and (max-width: 320px) {}
+/* Small screen, retina */
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 320px),
+	only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 320px),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 320px),
+	only screen and (        min-device-pixel-ratio: 2)      and (max-width: 320px),
+	only screen and (                min-resolution: 192dpi) and (max-width: 320px),
+	only screen and (                min-resolution: 2dppx)  and (max-width: 320px) { 
+
+		header #logo {
+			background: url(logo@2x.png) no-repeat;
+			background-size: contain;
+		}
+		.concept {
+			background: url(bg@2x.png) no-repeat;
+			height: 140px;
+			position: relative;
+		}
+
+		.form input {
+			border-radius: 0;
+			padding: 2% 1%;
+		}
+	}
+
+/* medium screen, non-retina */
+	@media only screen and (min-width: 422px) {
+
+		.concept {
+			background: url(bg.png) no-repeat;
+			height: 140px;
+			position: relative;
+		}
+
+		.video {
+			height: 175px;
+			width: 402px;
+		}
+
+		.form button {
+			margin: 10px 2%;
+		}
+	}
+/* Medium screen, retina */
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 422px),
+	only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 422px),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 422px),
+	only screen and (        min-device-pixel-ratio: 2)      and (min-width: 422px),
+	only screen and (                min-resolution: 192dpi) and (min-width: 422px),
+	only screen and (                min-resolution: 2dppx)  and (min-width: 422px) { 
+
+		header #logo {
+			background: url(logo@2x.png) no-repeat;
+			background-size: contain;
+		}
+
+		.concept {
+			background: url(bg@2x.png) no-repeat;
+			height: 140px;
+			position: relative;
+		}
+
+		.video {
+			height: 175px;
+			width: 402px;
+		}
+
+		.form button {
+			margin: 10px 2%;
+		}
+	}
+
+/* Large screen, non-retina */
+	@media only screen and (min-width: 685px) {
+		
+		html { background: url(dark_matter.png) repeat; }
+		body { max-width: 1024px; margin: 0 auto; }
+		
+		#nav:target {
+	  		width: 60%;
+	  		z-index: 999;
+		}
+	  
+		.concept {
+			background: url(bg.png) no-repeat;
+			background-size: cover;
+			height: 140px;
+			position: relative;
+		}
+
+		.video {
+			height: 175px;
+			width: 645px;
+		}
+	}
+/* Large screen, retina */
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 685px),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 685px),
+	only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 685px),
+	only screen and (        min-device-pixel-ratio: 2)      and (min-width: 685px),
+	only screen and (                min-resolution: 192dpi) and (min-width: 685px),
+	only screen and (                min-resolution: 2dppx)  and (min-width: 685px) { 
+
+		html { background: url(dark_matter_@2x.png) repeat; }
+		body { max-width: 1024px; margin: 0 auto; }
+		
+		header #logo {
+			background: url(logo@2x.png) no-repeat;
+			background-size: contain;
+		}
+
+		.concept {
+			background: url(bg@2x.png) no-repeat;
+			background-size: cover;
+			height: 140px;
+			position: relative;
+		}
+
+		.video {
+			height: 175px;
+			width: 605px;
+		}
+	}

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "ftuo-icons";
+  src: url("ftuo-icons.eot");
+  src: url("ftuo-icons.eot?#iefix") format("embedded-opentype"),
+       url("ftuo-icons.woff") format("woff"),
+       url("ftuo-icons.ttf") format("truetype"),
+       url("ftuo-icons.svg#ftuo-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-calculator:before,
+.icon-computer:before,
+.icon-mkt:before,
+.icon-health:before,
+.icon-scm:before,
+.icon-business:before,
+.icon-mkt2:before,
+.icon-pm2:before,
+.icon-scm2:before,
+.icon-pm:before,
+.icon-key:before {
+  font-family: "ftuo-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.icon-calculator:before { content: "\f100"; }
+.icon-computer:before { content: "\f101"; }
+.icon-mkt:before { content: "\f102"; }
+.icon-health:before { content: "\f103"; }
+.icon-scm:before { content: "\f104"; }
+.icon-business:before { content: "\f105"; }
+.icon-mkt2:before { content: "\f106"; }
+.icon-pm2:before { content: "\f107"; }
+.icon-scm2:before { content: "\f108"; }
+.icon-pm:before { content: "\f109"; }
+.icon-key:before { content: "\f10a"; }
