@@ -23,7 +23,6 @@ ________________________________________*/
 [id*="open-accordion"], [id*="close-accordion"] {
     background: #14cc45;
     border-bottom: 1px solid #fff;
-    box-shadow: 0 1px 2px #666;
     line-height: 30px;
     height: 30px;
     display: block;
@@ -38,7 +37,6 @@ ________________________________________*/
 
 .accordion a {
     color: #fff;
-    float: left;
     font-size: 1.25em;
     font-weight: normal;
     padding-left: 2%;

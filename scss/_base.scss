@@ -1,3 +1,130 @@
+/*=========================================
+  Home
+  =======================================*/
+.home {
+	color: $primaryTextColor;
+	display: block;
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 9;
+}
+
+.info {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.dinosaur {
+	display: none;
+	.triceratops {
+		display: block;
+		position: relative;
+		// animation: two-step 8s 5s;
+		// @include animation( two-step 8s 5s);
+		// -webkit-animation-fill-mode: forwards;
+		// animation-fill-mode: forwards;
+		.eye {
+			background: $primaryTextColor;
+			border: 4px solid #fff;
+			border-radius: 50%;
+			cursor: pointer;
+			height: 3%;
+			position: absolute;
+			right: 32%;
+			top: 29%;
+			width: 3%;
+			z-index: 999;
+			@include animation( blink 10s linear 3s );
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+			&:hover {
+				background: $secondaryColor;
+			}
+		}
+		.dino {
+			left: -50%;
+			position: relative;
+			width: 150%;
+		}
+	}
+}
+
+.content {
+	a {
+		display: inline-block;
+		margin: -.5em -4px 0 0;
+		height: 8em;
+		position: relative;
+		text-align: center;
+		width: 33%;
+		svg {
+			height: 6em;
+			margin: 0 5%;
+			position: relative;
+			top: 0;
+			vertical-align: top;
+			width: 90%;
+		}
+		&:nth-of-type(1) {
+			@include animation( rock 15s linear 1 10s );
+		}
+		&:nth-of-type(2) {
+			@include animation( rock 15s linear 1 20s);
+		}
+		&:nth-of-type(3) {
+			@include animation( rock 15s linear 1 30s);
+		}
+		&:hover {
+			cursor: pointer;
+			.frame {
+				fill: $secondaryColor;
+			}
+			.t-rex, .pteranodon, .stegosaurus {
+				@include transform( skew(-5deg,5deg) );
+				@include transition( .5s );
+				z-index: 1;
+				path {
+					fill: $fourthColor;
+				}		
+			}
+			i {
+				color: $secondaryColor;
+				opacity: 1;
+				@include transition( all 0.5s ease );
+			}
+		}
+		i {
+			color: $primaryColor / 2;
+			line-height: .75em;
+			opacity: .5;
+			@include transition( all 0.5s ease );
+		}
+	}
+	.t-rex, .pteranodon, .stegosaurus {
+		height: 3em;
+		margin: 0;
+		position: absolute;
+		top: 2em;
+	}
+	.t-rex {
+		left: 30%;	
+		width: 40%;
+	}
+	.pteranodon {
+		left: 27.5%;
+		width: 45%;
+	}
+	.stegosaurus {
+		left: 25%;
+		width: 50%;
+	}
+}
+
+/*=========================================
+  Contact, Work and Blog
+  =======================================*/
 .contact:target, .work:target, .blog:target {
 	margin-left: 0;
 	opacity: 1;
@@ -11,7 +138,7 @@
 	height: auto;
 	margin-left: -100%;
 	opacity: 0;
-	padding-top: 50%;
+	padding-top: 55%;
 	position: absolute;
 	width: 100%;
 	z-index: 1;
@@ -28,6 +155,36 @@
 		margin: 0 0 .25em 0;
 	}
 }
+
+/*=========================================
+  Blog
+  =======================================*/
+.blog-info {
+	background: transparent;
+	position: relative;
+	width: 100%;
+	a {
+		color: $primaryColor / 2;
+		display: inline-block;
+		font-family: 'Open Sans', sans-serif;
+		margin: 0 0 4em 0;
+		text-align: center;
+		width: 100%;
+		&:hover {
+			color: $secondaryColor;
+		}
+	}
+	i {
+		color: $primaryColor / 2;
+		display: block;
+		font-size: 1.5em;
+		font-style: normal;
+	}
+}
+
+/*=========================================
+  Contact
+  =======================================*/
 
 .contact-info {
 	background: transparent;
@@ -47,27 +204,186 @@
 	}
 }
 
-.blog-info {
-	background: transparent;
+.mail {
+	margin: 0 auto;
 	position: relative;
+	text-align: center;
 	width: 100%;
-	a {
-		color: $secondaryColor;
-		display: inline-block;
-		font-family: 'Open Sans', sans-serif;
-		margin: 0 0 4em 0;
-		text-align: center;
-		width: 100%;
+	max-width: 760px;
+	form {
+		margin: 0 auto;
+		position: relative;
+		width: 320px;
+		input {
+			border: 0;
+			color: $primaryColor / 2;
+			margin-bottom: 20px;
+			padding: 5px 10px;
+			width: 280px;
+		}
+		textarea {
+			border: 0;
+			color: $primaryColor / 2;
+			height: 8em;
+			margin-bottom: 20px;
+			padding: 5px 10px;
+			width: 280px;
+		}
+		button {
+			background: none;
+			border: none;
+			margin: 0 5%;
+			width: 90%;
+			i {
+				color: $thirdColor;
+				font-size: 2em;
+			}
+			&:hover i {
+				color: $fourthColor;
+			}
+		}
 	}
-	i {
-		color: $primaryColor / 2;
+	a {
+		color: $thirdColor;
 		display: block;
-		font-size: 1.5em;
-		font-style: normal;
+		&:hover {
+			color: $fourthColor;
+		}
+	}
+	.icon-home {
+		font-size: 2em;
 	}
 }
 
-[class*="fontawesome-"]:before {
-	font-style: normal;
-	margin-right: .5em;
+/*=========================================
+  Work
+  =======================================*/
+.work-info {
+	position: relative;
+	width: 100%;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			text-align: center;
+			span {
+				font-size: .5em;
+			}
+			.down {
+				opacity: .4;
+			}
+			a {	
+				border: 2px solid $primaryColor / 3;
+				display: block;
+				margin: 0 auto 2em;
+				opacity: 1;
+				padding: 2.5em 0;
+				position: relative;
+				text-align: center;
+				vertical-align: top;
+				width: 95%;
+				@include transition( .5s );	
+				h2 {
+					font-size: 1em;
+					margin: 0 auto;
+					text-shadow: 1px 1px #fff;
+					@include transition( .25s );
+				}
+				&:hover {
+					box-shadow: rgba(0, 100, 0, 0.15) 0px 25px 20px;
+					h2 {
+						color: $secondaryColor;
+						text-shadow: 1px 1px #fff;
+						@include transform( skew(-20deg, 2deg) );
+						@include transition( 1s );
+					}
+				}
+				&#pp {
+					background-image: url('../inc/img/chair_horz.jpg');
+					background-position: center 70%;
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+				&#mobile {
+					background-image: url('../inc/img/bg-img@2x.png');
+					background-position: center top;
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+				&#tkhf {
+					background-image: url('../inc/img/kids.jpg');
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					background-position: center 50%;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}	
+				&#attractics {
+					background-image: url('../inc/img/texture.png');
+					background-repeat: repeat;
+					background-position: center center;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+						h2 {
+							color: $primaryColor;
+						}
+					}
+				}
+				&#kades {
+					background-image: url('../inc/img/subtle_dots.png');
+					background-repeat: repeat;
+					background-position: 100% center;
+					background-size: auto;
+					&:hover {
+						background-size: 10% auto;
+					}
+				}
+				&#dr {
+					background-image: url('../inc/img/dr.jpg');
+					background-repeat: no-repeat;
+					background-position: top center;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+				&#ckay {
+					background-image: url('../inc/img/ckaybday1.jpg');
+					background-repeat: no-repeat;
+					background-position: 50%;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+				&#bisk{
+					background-image: url('../inc/img/bisk.jpeg');
+					background-repeat: repeat-x;
+					background-position: 100% 100%;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 110% auto;
+					}
+				}
+				&#aspire {
+					background-image: url('../inc/img/aspire.jpg');
+					background-repeat: no-repeat;
+					background-position: top;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
+					}
+				}
+			}
+		}
+	}
 }

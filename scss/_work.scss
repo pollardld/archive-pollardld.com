@@ -10,6 +10,9 @@
 			span {
 				font-size: .5em;
 			}
+			.down {
+				opacity: .4;
+			}
 			a {	
 				border: 2px solid $primaryColor / 3;
 				display: block;
@@ -34,6 +37,15 @@
 						text-shadow: 1px 1px #fff;
 						@include transform( skew(-20deg, 2deg) );
 						@include transition( 1s );
+					}
+				}
+				&#pp {
+					background-image: url('../inc/img/chair_horz.jpg');
+					background-position: center 70%;
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					&:hover {
+						background-size: 125% auto;
 					}
 				}
 				&#mobile {

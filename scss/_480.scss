@@ -1,15 +1,22 @@
-/*=========================================
-  Global
-  =======================================*/
-
 h1 {
 	font-size: 1.75em;
 }
+
+/* Over Nesting, DAMMIT DAVID! GET YOUR SHIT TOGETHER */
+.content {
+	a {
+		i {
+			line-height: 2em;
+		}
+	}
+}
+
 .contact, .work, .blog {
 	h1 {
 		font-size: 1.75em;
+		margin-bottom: .5em;
 	}
 }
 .work, .contact, .blog {
-	padding-top: 35%;
+	padding-top: 40%;
 }

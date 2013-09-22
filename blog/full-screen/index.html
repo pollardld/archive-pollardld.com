@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Using the fullscreen API to display web content on a user's entire screen.">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+	<title>Using fullscreen mode</title>
+
+</head>
+
+<body>
+	<nav>
+		<a href="http://pollardld.com#blog" class="icon-home"></a>
+		<a href="full-screen.zip" class="icon-download"></a>
+	</nav>
+	
+	<main>
+		<h1>Using the fullscreen api we can take over the user's entire screen! We can get the fuck out of the surppressing confines of the browser window and reach our full potiential!!</h1>
+		<h2>Just kidding, but it is super cool</h2>
+		<p>Here i am displaying images full screen, but you could fullscreen almost anything. Click an image to see it full screen.</p>
+		<p>View source or <a href="full-screen.zip">download</a> the files to see the scripting needed. Thanks <a href="http://nos.twnsnd.co/" target="_blank">http://nos.twnsnd.co/</a> for the images. Here is the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">Mozilla Dev documentation</a></p>
+		<p>
+			<img src="stock1.jpg" id="img1">
+			<img src="stock2.jpg" id="img2">
+			<img src="stock3.jpg" id="img3">
+		</p>
+
+	</main>
+
+<script>
+	var img1 = document.getElementById('img1');
+	var img2 = document.getElementById('img2');
+	var img3 = document.getElementById('img3');
+
+	img1.addEventListener("click", toggleFullScreen);
+	img2.addEventListener("click", toggleFullScreen);
+	img3.addEventListener("click", toggleFullScreen);
+
+	function toggleFullScreen() {
+	    if (!document.mozFullScreen && !document.webkitFullScreen) {
+	    	if (this.mozRequestFullScreen) {
+	        	this.mozRequestFullScreen();
+	    	} else {
+	        	this.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+	    	}
+	    } 
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Make a grid with scss or sass and remove the margins on the first and last children and distribute that extra width to the children equally.">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="grid.css" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author">
+
+	<title>Sassy Grid</title>
+
+</head>
+
+<body>
+	<nav>
+		<a href="http://pollardld.com#blog" class="icon-home"></a>
+		<a href="sassy-grid.zip" class="icon-download"></a>
+	</nav>
+	
+	<header>
+		<p>Here is an example of a scss grid, but what makes this grid different is that it will ignore its margin on the left and right side, if you wrap it in a class of spread.</p>
+		<p>This be what i mean:</p>
+	</header>
+
+	<main>
+	<section class="span12">
+		<section class="span8">Spanning 8 of 12 columns
+			<section class="span12">Spanning 12 of 12 with spread class applied to children
+				<div class="spread">
+					<section class="span4">Spanning 4 of a span8</section>
+					<section class="span4">Spanning 4 of a span8</section>
+					<section class="span4">Spanning 4 of a span8</section>
+				</div>
+			</section>
+		</section>
+		<section class="span4">Spanning 4 of 12 columns</section>
+	</section>
+	</main>
+
+	<aside><a href="grid.scss">Here is das code</a></aside>
+	<aside>Shout out to <a href="http://thomgriggs.com">Thom Griggs</a> for figuring out the pushpullwidth mixin!</aside>
+</body>
+</html>

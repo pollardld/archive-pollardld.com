@@ -1,0 +1,32 @@
+{	
+    "version": "1.0",
+    "name": "david pollard's blog post on manifest.webapp",
+    "description": "beep beep boop beep boooop",
+    "launch_path": "index.html",
+    "icons": {
+        "16": "sloth-16.png",
+        "48": "sloth-48.png",
+        "128": "sloth-128.png",
+        "263": "sloth-263.png"
+    },
+    "developer": {
+        "name": "D.I.C.C.FISH",
+        "url": "http://pollardld.com"
+    },
+    "installs_allowed_from": ["*"],
+    "locales": {
+        "es": {
+            "description": "beep beep beep boop boop",
+            "developer": {
+                "url": "http://pollardld.com"
+            }
+        },
+        "pt": {
+            "description": "beep beep beep boop boop",
+            "developer": {
+                "url": "http://pollardld.com"
+            }
+        }
+    },
+    "default_locale": "en"
+}

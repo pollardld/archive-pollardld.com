@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="html speech Recognition. webkitSpeechRecognition, mozSpeechRecognition, msSpeechRecognition, SpeechRecognition">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+    <title>HTML Speech Recognition</title>
+
+    <script src="annyang.js"></script>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script>
+        // first we make sure annyang started succesfully
+        if (annyang) {
+            // define the functions our commands will run.
+            var hello = function() {
+                $("#hello").fadeIn("slow");
+            };
+            
+            var commands = {
+                'hello': hello
+            };
+
+            annyang.debug();
+            annyang.init(commands);
+            annyang.start();
+
+        } else  {
+            $(document).ready(function() {
+                $('#unsupported').fadeIn('fast');
+            });
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="http://pollardld.com#blog" class="icon-home"></a>
+        <a href="speech-recognition.zip" class="icon-download"></a>
+    </nav>
+
+    <section id="unsupported" class="hidden">Sorry, no speech recognition support</section>
+    
+    <section>
+        <article id="hello" class="hidden">Hello!</article>
+        <article>Say Hello.</article>
+    </section>
+</body>
+</html>

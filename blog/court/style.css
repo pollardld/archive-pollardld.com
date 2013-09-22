@@ -1,0 +1,216 @@
+body { font-family: 'Open Sans', sans-serif; font-weight: 300;	font-size: 1em; margin: 0; }
+
+section {
+	color: #333;
+	margin: 2em auto;
+	position: relative;
+	width: 90%;
+}
+
+header {
+	margin: 2em auto 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+header h2 {
+	color: #068e4a;
+	font-size: 2.5em;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	top: 2em;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: 9;
+	animation: gone 1.5s 3.25s 1;
+	-webkit-animation: gone 1.5s 3.25s 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+header div {
+	display: inline-block;
+}
+
+.icon-legal {
+	color: rgba(40,40,40,.2);
+	display: inline-block;
+	font-size: 7.75em;
+	font-weight: 300;
+	transform:rotateZ(0deg);
+	-webkit-transform: rotateZ(0deg);
+	animation: hammer 2s 2s 1;
+	-webkit-animation: hammer 2s 2s 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+div .icon-legal {
+	transform:rotateZ(90deg);
+	-webkit-transform: rotateZ(90deg);
+	animation: hammer2 2.5s 2s 1;
+	-webkit-animation: hammer2 2.5s 2s 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+article {
+	margin-top: 8em;
+}
+
+article h2 {
+	color: #068e4a;
+	display: inline-block;
+	font-size: 2em;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	position: absolute;
+	top: 1.5em;
+	width: 100%;
+	z-index: 9;
+}
+
+article i {
+	color: rgba(40,40,40,.2);
+	display: inline-block;
+	font-size: 5em;
+	text-align: center;
+	width: 100%;
+}
+
+span {
+	display: block;
+	font-size: 1.25em;
+	margin: 1em auto 0;
+	text-align: center;
+	width: 80%;
+}
+
+article section div {
+	margin: 0 auto;
+	position: relative;
+	width: 80%;
+}
+blockquote {
+	color: #666;
+	display: inline-block;
+	margin: 1em .5em;
+	width: 100%;
+}
+
+blockquote img {
+	height: 40px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+i.quote {
+	display: inline-block;
+	font-size: 2em;
+	width: 5%;
+}
+
+.vector {
+	display: block;
+	margin: 0 auto;
+	width: 90px;
+}
+
+/*========================================
+  For Template
+  =======================================*/
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../../inc/fonts/fontawesome.eot");
+  src: url("../../inc/fonts/fontawesome?#iefix") format("embedded-opentype"), 
+       url("../../inc/fonts/fontawesome.woff") format("woff"),
+       url("../../inc/fonts/fontawesome.ttf") format("truetype"),
+       url("../../inc/fonts/fontawesome.svg#fontawesome") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* fontawesome */
+.icon-home:before {
+    background: #24ffaf;
+    border-radius: 25%;
+    color: #fff;
+    content: "\f015";
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 1%;
+    position: absolute;
+    top: 1%;
+    left: .5%;
+}
+
+.icon-download:before {
+    background: #24ffaf;
+    border-radius: 25%;
+    color: #fff;
+    content: "\f01a";
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 1%;
+    position: absolute;
+    top: 1%;
+    right: .5%;
+}
+
+@keyframes hammer {
+	0% { transform: rotateZ(0deg); }
+	100% { 	transform: rotateZ(135deg); }
+}
+
+@-webkit-keyframes hammer {
+	0% { -webkit-transform: rotateZ(0deg); }
+	100% { 	-webkit-transform: rotateZ(135deg); }
+}
+
+@keyframes hammer2 {
+	0% { transform: rotateZ(90deg); }
+	100% { 	transform: rotateZ(-45deg); }
+}
+
+@-webkit-keyframes hammer2 {
+	0% { -webkit-transform: rotateZ(90deg); }
+	100% { 	-webkit-transform: rotateZ(-45deg); }
+}
+
+@keyframes gone {
+	0% { height: 2em; top: 2em; }
+	100% { 	height: 0; top: 3em; }
+}
+
+@-webkit-keyframes gone {
+	0% { height: 2em; top: 2em; }
+	100% { 	height: 0; top: 3em; }
+}
+
+@media (max-width: 481px) {
+	article h2 {
+		font-size: 1.25em;
+		top: .5em;
+	}
+}

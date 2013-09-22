@@ -5,9 +5,13 @@
 	<meta charset="UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
 	<meta name="viewport" content="width=device-width"/>
+	<meta description="David Pollards map of places visited and wanting to go.">
 
-	<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js'></script>
-  	<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />
+	<script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  	<link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  	<!--[if lte IE 8]>
+    	<link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
+  	<![endif]-->
 <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -20,7 +24,24 @@
 
 <div id='map'></div>
 <script>
-  mapbox.auto('map', 'diccfish.map-fwz7rlzv');
+  	// ramp up dat map
+	var map = L.mapbox.map('map', 'diccfish.map-fwz7rlzv');
+
+	// Lengend
+	map.legendControl.addLegend("Pink = Been");
+	map.legendControl.addLegend("Black = Want to Go");
+
+  	// Turn off interaction
+	map.scrollWheelZoom.disable();
+
+	// Zoom in on da clicks
+	map.markerLayer.on( 'click', function( e ) {
+        map.panTo( e.layer.getLatLng() );
+        map.setZoom( 5 );
+    });
+	
+	// setting the default map geo coords and worldly view
+    map.setView( [40, 0], 2);
 </script>
 </body>
 </html>

@@ -1,17 +1,3 @@
-@-webkit-keyframes boom {
-  0% {
-	background: $secondaryColor;
-  }
-  100% {
-  	box-shadow: 0 0 25em $secondaryColor;
-  	height: 5em;
-  	width: 5em;
-  	top: 2.5em;
-  	right: 2.5em;
-  	opacity: .5;
-  }
-}
-
 @-webkit-keyframes blink {
 	0% { height: 1%; }
 	0.75% { height: 0; border: 2px solid #363D3D; transform: rotateX(360deg); -webkit-transform: rotateX(360deg); }
@@ -28,25 +14,6 @@
 	99.25% { height: 0; border: 5px solid #363D3D; transform: rotateX(360deg); -moz-transform: rotateX(360deg);}
 	100% { height: 1.75%; width: 4%;}
 }
-
-/* @-webkit-keyframes two-step {
-	from { left: 0; }
-	20% { left: -30%; }
-	30% { left: -110%; }
-	45% { left: -110%; }
-	70% { left: -70%; }
-	90% { left: -60%; }
-	to { left: -30%; }
-}
-@keyframes two-step {
-	from { left: 0; }
-	20% { left: -30%; }
-	30% { left: -110%; }
-	45% { left: -110%; }
-	70% { left: -70%; }
-	90% { left: -60%; }
-	to { left: -30%; }
-} */
 
 @-webkit-keyframes rock {
 	0% { -webkit-transform: rotateZ(0); }

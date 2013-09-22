@@ -8,9 +8,27 @@ section {
 }
 
 header {
-	margin: 0 auto;
+	margin: 2em auto 0;
 	position: relative;
-	width: 50%;
+	text-align: center;
+	width: 100%;
+}
+
+header h2 {
+	color: #068e4a;
+	font-size: 2.5em;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	top: 2em;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: 9;
+	animation: gone 1.5s 3.25s 1;
+	-webkit-animation: gone 1.5s 3.25s 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
 }
 
 header div {
@@ -18,30 +36,92 @@ header div {
 }
 
 .icon-legal {
-	color: #000;
+	color: rgba(40,40,40,.2);
 	display: inline-block;
-	font-size: 8em;
+	font-size: 7.75em;
 	font-weight: 300;
-	padding-left: 1.05em;
+	transform:rotateZ(0deg);
+	-webkit-transform: rotateZ(0deg);
+	animation: hammer 2s 2s 1;
+	-webkit-animation: hammer 2s 2s 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
 }
 div .icon-legal {
-	margin-left: -.5em;
-	transform:rotateY(180deg);
-	-webkit-transform: rotateY(180deg);
+	transform:rotateZ(90deg);
+	-webkit-transform: rotateZ(90deg);
+	animation: hammer2 2.5s 2s 1;
+	-webkit-animation: hammer2 2.5s 2s 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
 }
 
-h2 {
-	background: rgba(0,0,0,0.2);
-	color: #fff;
+article {
+	margin-top: 8em;
+}
+
+article h2 {
+	color: #068e4a;
 	display: inline-block;
+	font-size: 2em;
 	margin: 0;
 	text-align: center;
-	top: 14vh;
+	text-transform: uppercase;
 	position: absolute;
+	top: 1.5em;
 	width: 100%;
 	z-index: 9;
 }
 
+article i {
+	color: rgba(40,40,40,.2);
+	display: inline-block;
+	font-size: 5em;
+	text-align: center;
+	width: 100%;
+}
+
+span {
+	display: block;
+	font-size: 1.25em;
+	margin: 1em auto 0;
+	text-align: center;
+	width: 80%;
+}
+
+article section div {
+	margin: 0 auto;
+	position: relative;
+	width: 80%;
+}
+blockquote {
+	color: #666;
+	display: inline-block;
+	margin: 1em .5em;
+	width: 100%;
+}
+
+blockquote img {
+	height: 40px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+i.quote {
+	display: inline-block;
+	font-size: 2em;
+	width: 5%;
+}
+
+.vector {
+	display: block;
+	margin: 0 auto;
+	width: 90px;
+}
+
+main article:last-child span {
+	display: none;
+}
 
 /*========================================
   For Template
@@ -100,4 +180,41 @@ h2 {
     position: absolute;
     top: 1%;
     right: .5%;
+}
+
+@keyframes hammer {
+	0% { transform: rotateZ(0deg); }
+	100% { 	transform: rotateZ(135deg); }
+}
+
+@-webkit-keyframes hammer {
+	0% { -webkit-transform: rotateZ(0deg); }
+	100% { 	-webkit-transform: rotateZ(135deg); }
+}
+
+@keyframes hammer2 {
+	0% { transform: rotateZ(90deg); }
+	100% { 	transform: rotateZ(-45deg); }
+}
+
+@-webkit-keyframes hammer2 {
+	0% { -webkit-transform: rotateZ(90deg); }
+	100% { 	-webkit-transform: rotateZ(-45deg); }
+}
+
+@keyframes gone {
+	0% { height: 2em; top: 2em; }
+	100% { 	height: 0; top: 3em; }
+}
+
+@-webkit-keyframes gone {
+	0% { height: 2em; top: 2em; }
+	100% { 	height: 0; top: 3em; }
+}
+
+@media (max-width: 481px) {
+	article h2 {
+		font-size: 1.25em;
+		top: .5em;
+	}
 }

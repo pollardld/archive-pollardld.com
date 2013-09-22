@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="using the new webkit srcset for responsive images">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+	<title>srcset in Webkit</title>
+
+</head>
+
+<body>
+	<nav>
+		<a href="http://pollardld.com#blog" class="icon-home"></a>
+		<a href="srcset.zip" class="icon-download"></a>
+	</nav>
+
+	<section>
+		<article>
+			<p></p>
+			<p>So I wanted to try out the new webkit srcset, and it is below. The correct result is only available in the nightly build of safari, but will be running into all webkit browsers soon.</p>
+			<p>Heres what you need:
+				<ul>
+					<li>img tag</li>
+					<li>fallback src</li>
+					<li>srcset for different viewports (ex., 2x = double pixel density, 600w = 600 screen width)</li>
+				</ul>
+				<code>&lt;img src="sailors_320_600.jpg" srcset="sailors_640_600.jpg 2x, sailors.jpg 2.5x"&gt;</code>
+			</p>
+			<img alt="hey sailor" 
+				 src="sailors_320_600.jpg"
+				 srcset="sailors_640_600.jpg 2x, sailors.jpg 2.5x" 
+				 style="width: 280px; height: auto; margin: 0 auto;" >
+		</article>
+	</section>
+	
+</body>
+</html>

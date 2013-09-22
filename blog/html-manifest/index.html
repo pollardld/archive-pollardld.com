@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="web application caching and app manifest with html5 for html web apps and firefox os">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author">
+
+	<title>application cache and manifest web app</title>
+
+</head>
+
+<body>
+	<nav>
+		<a href="http://pollardld.com#blog" class="icon-home"></a>
+		<a href="html-manifest.zip" class="icon-download"></a>
+	</nav>
+	
+	<header>
+		<h1>MANIFESTING!</h1>
+		<h1>HTML MANIFESTING!!</h1>
+		<p>not to be confused with manfeasting which would be cannibalism. Here is an awesome map from <a href="http://commons.wikimedia.org/wiki/File:Cannibalism.jpg" target="_blank">wikimedia</a> showing the spread of human cannibalism.</p>
+		<p><img src="http://pollardld.com/blog/html-manifest/Cannibalism.jpg" id="can-map" /></p>
+		<p>And here is an excellent video depicting a mantis which is a cannibal while mating</p>
+		<p><iframe width="320" height="200" src="//www.youtube.com/embed/0aSCPmabRpM" frameborder="0" allowfullscreen></iframe></p>
+	</header>
+
+	<main>
+		<h1>BUT LETS START THIS MANIFESTING PARTY!!!</h1>
+		<p>Firefox OS is badass, and I want it for my phone. It is even more badass how easy it is to make an html5 web app into a firefox app.</p>
+		<p>I learned about this little trick from <a href="https://tech.pro/blog/1557/7-useful-mobile-html-css-and-javascript-snippets?utm_source=postgresweekly&utm_medium=email" target="_blank">this blog post</a> by David Walsh on <a href="https://tech.pro/">Tech Pro</a>. The trick is a massively complex 31 line file you name <code>manifest.webapp</code> and included on your server! <a href="manifest.webapp" target="_blank">Here are all 31 lines</a>, and just by looking you will be like "What the fuck is going on? This makes no sense!" Some of the lines you don't even need (that is if you would like to ignore the fact that firefox os is currenlty available in Venezuela, Poland, Brazil, Portugal and Spain).</p>
+		<p>Now, lettuce cache that ish. The goal here is to allow the user to access the app when they have no internet connection. To do this, create an <code>example.appcache</code> file, and add the attribute <code>manifest</code> to the <code>html</code> tag. Here is the one i used:
+		<br /> <code>&lt;html manifest="manifest.appcache"&gt;</code>. For much more information on this go to the <a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache" target="_blank">mozilla dev site</a></p>
+	</main>
+
+<script>
+	var mapImg = document.getElementById('can-map');
+
+	mapImg.addEventListener("click", toggleFullScreen);
+
+	function toggleFullScreen() {
+	    if (!document.mozFullScreen && !document.webkitFullScreen) {
+	    	if (this.mozRequestFullScreen) {
+	        	this.mozRequestFullScreen();
+	    	} else {
+	        	this.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+	    	}
+	    } 
+	}
+</script>
+</body>
+</html>

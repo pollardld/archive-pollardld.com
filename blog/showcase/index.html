@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="showcase frame for smart scrolling">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+	<title>Showcase Frame</title>
+
+</head>
+
+<body>
+	<nav>
+		<a href="http://pollardld.com#blog" class="icon-home"></a>
+		<a href="showcase.zip" class="icon-download"></a>
+	</nav>
+	
+	<main>
+		<header>
+			<h2>OOOO LALA</h2>
+			<h2>Look at you showcase area</h2>
+			<p>Below is a section that is kind of like if a carousel was attacked by a one page app, and during the battle the one page app killed the carousel's annoying features, then claimed victory by occupying the space the carousel used to be in, with a big fuck you stupid carousel.</p>
+			<p>I used the jQuery plugin <a href="http://wtm.github.io/jquery.snapscroll/">Snap Scroll</a>, and edited the code a tiny bit to be condensed into a class "frame" . The Snap Scroll plugin dependencies are the always useful plugin <a href="https://github.com/flesler/jquery.scrollTo">jQuery.ScrollTo</a>, and a of course <a href="http://jquery.com/">jQuery</a>. So there are a few scripts involved to get this functionality. Download all this shit and take a look see.</p>
+		</header>
+
+		<section class="frame">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</section>	
+	</main>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.scrollTo.js"></script>
+<script src="jquery.snapscroll.js"></script>
+<script>
+	$(function() {
+	  $('.frame').snapscroll();
+	});
+</script>
+</body>
+</html>

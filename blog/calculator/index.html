@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="making a javascript calculator">
+    <meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="author" href="https://plus.google.com/110509288613946706724?rel=author" />
+
+	<title>Calculator</title>
+
+</head>
+
+<body>
+	<nav>
+		<a href="http://pollardld.com#blog" class="icon-home"></a>
+		<a href="into-view.zip" class="icon-download"></a>
+	</nav>
+	
+	<header>
+		<p>Below is a calculator of sorts for mathamatical constants and famous equations. It is not really a calculator just looks like one, but maybe i will make it a calculator one day. I really just wanted a place to store mathematical constants, maybe i use these for passwords and am being real slick about it, but probably not. If you know any of my logins i would not even bother trying these, you are just wasting you time and mine, cause i will have to unlock my account.</p>
+
+		<p>Also, disclaimer, i am not a mathematician nor do i claim to fully grasp all these equations (i am look at you Euler). The equations below use built in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Javascript Math</a> and if not i created the functions myself, so please dont hate. However, if you can make them better and would like to see them corrected <a href="http://pollardld.com/mail.php" target="_blank">holla</a>, and of course you will be credited, never debited <small>that just wanted to rhyme</small>.</p>
+	</header>
+
+	<main>
+		<section id="calculator"></section>
+		<button id="pi">π</button>
+		<button id="e">e</button>
+		<button id="golden">φ</button>
+		<button id="random">rand</button>
+		<button id="fib">F</button>
+		<button id="ln2">LN2</button>
+		<button id="ln10">LN10</button>
+		<button id="euler">e<sup>iπ</sup>+1</button>
+	</main>
+
+<script>
+	var calculator = document.getElementById('calculator');
+	var clickPi = document.getElementById('pi').addEventListener("click", function() { return pi()	});
+	var clickE = document.getElementById('e').addEventListener("click", function() { return e() });
+	var clickLn2 = document.getElementById('ln2').addEventListener("click", function() { return ln2() });
+	var clickLn10 = document.getElementById('ln10').addEventListener("click", function() { return ln10() });
+	var clickGolden = document.getElementById('golden').addEventListener("click", function() { return golden() });
+	var clickRandom = document.getElementById('random').addEventListener("click", function() { return rand() });
+	var clickFib = document.getElementById('fib').addEventListener("click", function() { return fib() });
+	var clickEuler = document.getElementById('euler').addEventListener("click", function() { return euler() });
+
+
+	function pi() {
+		var calcPi = function getPi() {
+						return Math.PI;
+				 	 }
+		calculator.textContent = calcPi();
+	}
+
+	function e() {
+		var calcE = function getNapier() {
+					   return Math.E;
+					 }
+		calculator.textContent = calcE();
+	}
+
+	function ln2() {
+		var calcLn2 = function getNatLog2() {
+					    return Math.LN2
+					  }
+		calculator.textContent = calcLn2();
+	}
+
+	function ln10() {
+		var calcLn10 = function getNatLog10() {
+					    return Math.LN10
+					  }
+		calculator.textContent = calcLn10();
+	}
+
+	function golden() {
+		var calcGolden = (1 + Math.sqrt(5))/2;
+		calculator.textContent = calcGolden;
+	}
+
+	function rand() {
+		var calcRand = function getRandom() {
+						return Math.random();
+					   }
+		calculator.textContent = calcRand();
+	}
+
+	function fib() {
+		var calcFib = 01123581321345589;
+		calculator.textContent = calcFib;
+	}
+
+	function euler() {
+	//not really the equation, if you know how to correctly code this please share!!
+		var calcEuler = function getEuler() {
+							var e = Math.E;
+							var cosSinPi = 0;
+							var pow = Math.pow(e, cosSinPi) + -2; 
+							return pow + 1;
+					    }
+		calculator.textContent = calcEuler();
+	}
+</script>
+</body>
+</html>

@@ -17,8 +17,13 @@ h1 {
   margin: 1em 0 .25em;
 }
 h4 {
-	font-size: .75em;
+	font-size: .875em;
 	margin: 0 0 1em;
+  span {
+    color: $primaryColor / 1.33;
+    font-family: $sansFont;
+    font-size: .75em;
+  }
 }
 
 a {

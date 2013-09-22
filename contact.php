@@ -6,12 +6,12 @@
 		<h1>Ptalk To Me</h1>
 		<p>Oh hia, i am david pollard</p>
 		<p>this is my site.</p>
-		<p>say hi!</p>
+		<p><a href="mail.php">say hi!</a></p>
 	</article>
 	
 	<article>
 		<section class="contact-info">
-			<a href="mailto:pollardld@gmail.com">e <i class="icon-envelope"></i></a>
+			<a href="mail.php">e <i class="icon-envelope"></i></a>
 			<a href="https://github.com/diccfish"><i class="icon-github-alt"></i></a>
 			<a href="https://plus.google.com/110509288613946706724?rel=author"><i class="icon-google-plus"></i></a>
 			<a href="http://www.codecademy.com/diccfish">code <i class="icon-beaker"></i></a>

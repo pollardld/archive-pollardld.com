@@ -1,0 +1,55 @@
+/*============================================
+  Grid
+=============================================*/
+$column-width: 6.25%;
+$gutter-width: 2.083%;
+$columns: 12;
+$total-width: ($column-width * $columns) + ($gutter-width * $columns);
+
+@mixin column ($x, $columns:$columns) {
+  $_gridsystem-width: ($column-width * $columns) + ($gutter-width * $columns);
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: $total-width * (((($gutter-width + $column-width) * $x) - $gutter-width) / $_gridsystem-width);
+  margin: 0 $total-width * (($gutter-width * .5) / $_gridsystem-width);
+}
+
+@mixin pull ($x, $columns:$columns) {
+  margin: 0 $total-width * (($gutter-width * .5) / $total-width) 0 0;
+}
+
+@mixin push ($x, $columns:$columns) {
+  margin: 0 0 0 $total-width * (($gutter-width * .5) / $total-width);
+}
+
+@mixin pushpullwidth ($x, $columns:$columns) {
+  width: ($total-width - ($gutter-width * 2)) * ((($gutter-width + $column-width) * $x) / $total-width);
+}
+
+.span1 { @include column(1) }
+.span2 { @include column(2) }
+.span3 { @include column(3) }
+.span4 { @include column(4) }
+.span5 { @include column(5) }
+.span6 { @include column(6) }
+.span7 { @include column(7) }
+.span8 { @include column(8) }
+.span9 { @include column(9) }
+.span10 { @include column(10) }
+.span11 { @include column(11) }
+.span12 { @include column(12) }
+
+.spread {
+  &> .span4 {
+    &:nth-of-type(1n) {
+      @include pushpullwidth(4);
+    }
+    &:nth-of-type(1) {
+      @include pull(4);
+    } 
+    &:last-child { 
+      @include push(4);
+    }
+  }
+}

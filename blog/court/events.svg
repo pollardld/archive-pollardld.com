@@ -1,0 +1,15 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+<line fill="#24D494" stroke="#24D494" stroke-width="0.5" stroke-miterlimit="10" x1="19.797" y1="37.365" x2="100" y2="37.365"/>
+<line fill="#24D494" stroke="#24D494" stroke-width="0.5" stroke-miterlimit="10" x1="19.797" y1="70.967" x2="100" y2="70.967"/>
+<line fill="#24D494" stroke="#24D494" stroke-width="0.5" stroke-miterlimit="10" x1="20.1" y1="-0.176" x2="20.1" y2="37.199"/>
+<text transform="matrix(1 0 0 1 20.0997 66.2689)" fill="#24D494" font-family="sans-serif" font-size="8">x</text>
+<text transform="matrix(1 0 0 1 58.5515 64.2324)" fill="#24D494" font-family="sans-serif" font-size="8">x</text>
+<text transform="matrix(1 0 0 1 83.7575 43.7606)" fill="#24D494" font-family="sans-serif" font-size="8">x</text>
+<text transform="matrix(1 0 0 1 84.588 63.5281)" fill="#24D494" font-family="sans-serif" font-size="8">x</text>
+<text transform="matrix(1 0 0 1 56.0166 25.9865)" fill="#24D494" font-family="sans-serif" font-size="8">x</text>
+<rect x="64.49" y="39.535" transform="matrix(0.7784 -0.6278 0.6278 0.7784 -16.5198 54.5106)" fill="#24D494" fill-opacity="0.5" width="8.924" height="22.239"/>
+<rect x="70.845" y="57.647" transform="matrix(-0.0039 -1 1 -0.0039 8.4804 140.9851)" fill="#24D494" width="7.224" height="17.244"/>
+<rect x="54.09" y="37.871" transform="matrix(0.0085 -1 1 0.0085 9.0672 107.1251)" fill="#24D494" fill-opacity="0.5" width="8.924" height="22.239"/>
+<text transform="matrix(1 0 0 1 41.4485 58.9135)" fill="#24D494" font-family="'Junction'" font-size="8">0</text>
+<rect x="4.392" y="6.645" transform="matrix(1 -0.0033 0.0033 1 -0.0583 0.0292)" fill="#24D494" fill-opacity="0.5" width="8.924" height="22.239"/>
+</svg>
